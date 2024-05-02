@@ -8,14 +8,14 @@ int main()
 
     std::ostream_iterator<int> it(std::cout, " ");
     //output
-    std::cout << "output: ";
+    std::cout << "output: " << std::endl;;
     for (auto it = vettore.begin(); it != vettore.end(); ++it) {
         std::cout << *it << " ";
     }
     std::cout << std::endl;
 
     //reverse output
-    std::cout << "reversed output: ";
+    std::cout << "reversed output: " << std::endl;;
     std::copy(vettore.rbegin(), vettore.rend(), it);
     std::cout << std::endl;
 
@@ -25,23 +25,22 @@ int main()
 
     //sorting in descending order
     std::sort(vettore.begin(), vettore.end(), std::greater<int>());
-    std::cout << "output: ";
+    std::cout << "output after sorting in descending order: " << std::endl;
     std::copy(vettore.begin(), vettore.end(), it);
     std::cout << std::endl;
 
     //sorting in ascending order
     std::sort(vettore.begin(), vettore.end(), std::less<int>());
-    std::cout << "output: ";
+    std::cout << "output after sorting in ascending order: " << std::endl;
     std::copy(vettore.begin(), vettore.end(), it);
     std::cout << std::endl;
 
     vettore.push_back(8);
-    std::cout << "output: ";
+    std::cout << "output after adding random number: " << std::endl;;
     for (auto it = vettore.begin(); it != vettore.end(); ++it) {
         std::cout << *it << " ";
     }
     std::cout << std::endl;
-
 
 
     return 0;
